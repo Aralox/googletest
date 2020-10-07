@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0E743B73-6C89-310D-8CF6-49B0273AE687}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\src\googletest\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/src/googletest/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/src/googletest -BC:/src/googletest/mybuild --check-stamp-file C:/src/googletest/mybuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/src/googletest/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.12\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\src\googletest\CMakeLists.txt;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeCCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeCXXCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeRCCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeSystem.cmake;C:\src\googletest\mybuild\CMakeFiles\feature_tests.c;C:\src\googletest\mybuild\CMakeFiles\feature_tests.cxx;C:\src\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\src\googletest\mybuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/src/googletest/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/src/googletest -BC:/src/googletest/mybuild --check-stamp-file C:/src/googletest/mybuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/src/googletest/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.12\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\src\googletest\CMakeLists.txt;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeCCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeCXXCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeRCCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeSystem.cmake;C:\src\googletest\mybuild\CMakeFiles\feature_tests.c;C:\src\googletest\mybuild\CMakeFiles\feature_tests.cxx;C:\src\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\src\googletest\mybuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/src/googletest/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/src/googletest -BC:/src/googletest/mybuild --check-stamp-file C:/src/googletest/mybuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/src/googletest/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.12\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\src\googletest\CMakeLists.txt;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeCCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeCXXCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeRCCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeSystem.cmake;C:\src\googletest\mybuild\CMakeFiles\feature_tests.c;C:\src\googletest\mybuild\CMakeFiles\feature_tests.cxx;C:\src\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\src\googletest\mybuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/src/googletest/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/src/googletest -BC:/src/googletest/mybuild --check-stamp-file C:/src/googletest/mybuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/src/googletest/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.12\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\src\googletest\CMakeLists.txt;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeCCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeCXXCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeRCCompiler.cmake;C:\src\googletest\mybuild\CMakeFiles\3.12.2\CMakeSystem.cmake;C:\src\googletest\mybuild\CMakeFiles\feature_tests.c;C:\src\googletest\mybuild\CMakeFiles\feature_tests.cxx;C:\src\googletest\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\src\googletest\mybuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\src\googletest\mybuild\ZERO_CHECK.vcxproj">
+      <Project>{963C5C5A-CBB9-3FD8-AE36-9D6D689A46E0}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock.vcxproj">
+      <Project>{DC64AEA3-E999-3CBB-BB60-3951F0293918}</Project>
+      <Name>gmock</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-actions_test.vcxproj">
+      <Project>{011D6BA4-06EF-3224-ABAC-261932C3329D}</Project>
+      <Name>gmock-actions_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-cardinalities_test.vcxproj">
+      <Project>{CFA51E07-B6C6-3F7C-81B4-62BC0106FBF1}</Project>
+      <Name>gmock-cardinalities_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-function-mocker_test.vcxproj">
+      <Project>{71D28706-BA1C-3885-9FD4-C27268C6E2AB}</Project>
+      <Name>gmock-function-mocker_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-generated-actions_test.vcxproj">
+      <Project>{2C0848A6-B06B-3014-9DAD-A7BAEB7B5EC9}</Project>
+      <Name>gmock-generated-actions_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-internal-utils_test.vcxproj">
+      <Project>{1120BE32-DEFE-3A5E-A995-E698C8B06574}</Project>
+      <Name>gmock-internal-utils_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-matchers_test.vcxproj">
+      <Project>{30493485-6965-344E-8287-2F25C00336B7}</Project>
+      <Name>gmock-matchers_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-more-actions_no_exception_test.vcxproj">
+      <Project>{F4BAEACB-0F05-3873-9EB7-0CD67F3550F3}</Project>
+      <Name>gmock-more-actions_no_exception_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-more-actions_test.vcxproj">
+      <Project>{1FCDE80E-C089-3CD9-B24B-05C63A084CB2}</Project>
+      <Name>gmock-more-actions_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-nice-strict_test.vcxproj">
+      <Project>{8ECDAC57-6DCF-36C1-BE9B-B44312D76879}</Project>
+      <Name>gmock-nice-strict_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-port_test.vcxproj">
+      <Project>{6BAC014F-A880-37A9-A910-45D7B963D10E}</Project>
+      <Name>gmock-port_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock-spec-builders_test.vcxproj">
+      <Project>{97EACF9C-D194-3CE9-9AA8-7C2C0C5F33A1}</Project>
+      <Name>gmock-spec-builders_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock_ex_test.vcxproj">
+      <Project>{2B5D75BF-B81B-3F6B-8CB6-67AFAD7471CE}</Project>
+      <Name>gmock_ex_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock_leak_test_.vcxproj">
+      <Project>{F3F18A5D-0EBB-3978-A90E-F7CCCC155561}</Project>
+      <Name>gmock_leak_test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock_link_test.vcxproj">
+      <Project>{146C9137-1C60-34F2-AC21-1ACF3EB44097}</Project>
+      <Name>gmock_link_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock_main.vcxproj">
+      <Project>{A4F37B3D-721A-3094-808A-353EFBADBBAD}</Project>
+      <Name>gmock_main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock_main_no_exception.vcxproj">
+      <Project>{D8C70C8E-5CC5-38FE-87FC-DB2788A4F789}</Project>
+      <Name>gmock_main_no_exception</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock_main_no_rtti.vcxproj">
+      <Project>{F5CA0FEF-4CFF-3B25-85D7-35CA34F6D458}</Project>
+      <Name>gmock_main_no_rtti</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock_no_rtti_test.vcxproj">
+      <Project>{BDC15565-AA6A-3E72-A27B-19AC1D685A50}</Project>
+      <Name>gmock_no_rtti_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock_output_test_.vcxproj">
+      <Project>{FE3A8570-856B-3F5D-A1D5-D37E7E1B215C}</Project>
+      <Name>gmock_output_test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\gmock_test.vcxproj">
+      <Project>{5C0B6AE5-5626-307B-94E6-F10916BED12E}</Project>
+      <Name>gmock_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-break-on-failure-unittest_.vcxproj">
+      <Project>{59090984-847D-323A-B0D9-06067212DEBF}</Project>
+      <Name>googletest-break-on-failure-unittest_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-catch-exceptions-ex-test_.vcxproj">
+      <Project>{A162BC87-EBBE-3935-8B94-20EAEBE632DD}</Project>
+      <Name>googletest-catch-exceptions-ex-test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-catch-exceptions-no-ex-test_.vcxproj">
+      <Project>{162EA142-9775-399C-8841-00BDAE6382EA}</Project>
+      <Name>googletest-catch-exceptions-no-ex-test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-color-test_.vcxproj">
+      <Project>{4129D4DD-86BE-3275-BBAF-CFC79F41217B}</Project>
+      <Name>googletest-color-test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-death-test-test.vcxproj">
+      <Project>{00E36B6F-1C37-30FD-ABA3-98AC6D2D1086}</Project>
+      <Name>googletest-death-test-test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-env-var-test_.vcxproj">
+      <Project>{209F6003-B3D5-372A-9272-9ACFA1A66CE3}</Project>
+      <Name>googletest-env-var-test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-filepath-test.vcxproj">
+      <Project>{5259F889-8267-3814-9F7E-23E1493484B7}</Project>
+      <Name>googletest-filepath-test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-filter-unittest_.vcxproj">
+      <Project>{4EF09845-21B7-36DA-B39E-89216B0ECFFA}</Project>
+      <Name>googletest-filter-unittest_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-list-tests-unittest_.vcxproj">
+      <Project>{43FDF928-6F25-3B35-B8F4-24D1E62BE186}</Project>
+      <Name>googletest-list-tests-unittest_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-listener-test.vcxproj">
+      <Project>{1EB29814-BF4E-3787-90EF-0B82718F3C0B}</Project>
+      <Name>googletest-listener-test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-message-test.vcxproj">
+      <Project>{5DF229F9-AABD-3F88-B339-819966BD9F8F}</Project>
+      <Name>googletest-message-test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-options-test.vcxproj">
+      <Project>{B148487D-9CB8-3D03-A0FB-AAE3B9837152}</Project>
+      <Name>googletest-options-test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-output-test_.vcxproj">
+      <Project>{2D3BA602-068A-360C-89D7-B40B9BC3C968}</Project>
+      <Name>googletest-output-test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-param-test-test.vcxproj">
+      <Project>{D020CB33-2206-37C5-AF2F-44062F1265D9}</Project>
+      <Name>googletest-param-test-test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-port-test.vcxproj">
+      <Project>{80FBDA71-9500-3F37-9D0A-3E1751E226EB}</Project>
+      <Name>googletest-port-test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-printers-test.vcxproj">
+      <Project>{0236C011-2152-3FD3-BC06-2A3A3174B0D0}</Project>
+      <Name>googletest-printers-test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-shuffle-test_.vcxproj">
+      <Project>{E8E4B483-75D0-3618-8C11-A3F6D78A9B57}</Project>
+      <Name>googletest-shuffle-test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-test-part-test.vcxproj">
+      <Project>{6763ECA1-1AA7-374F-83A5-314EBF858BE8}</Project>
+      <Name>googletest-test-part-test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-throw-on-failure-test_.vcxproj">
+      <Project>{21C470CC-BFBC-364E-9887-587731B34B0A}</Project>
+      <Name>googletest-throw-on-failure-test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\googletest-uninitialized-test_.vcxproj">
+      <Project>{FA3F5648-A738-327E-9782-4728C52A4927}</Project>
+      <Name>googletest-uninitialized-test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest.vcxproj">
+      <Project>{1AFBAD10-E233-3114-959F-9F2093686B90}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest-death-test_ex_catch_test.vcxproj">
+      <Project>{459E842A-D10F-39E4-BAB0-404BB0DAF795}</Project>
+      <Name>gtest-death-test_ex_catch_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest-death-test_ex_nocatch_test.vcxproj">
+      <Project>{D6A6D4F4-079A-3ED3-8360-D99CA390A264}</Project>
+      <Name>gtest-death-test_ex_nocatch_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest-typed-test_test.vcxproj">
+      <Project>{08536BCF-4737-3CE0-B415-55A6A876A231}</Project>
+      <Name>gtest-typed-test_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest-unittest-api_test.vcxproj">
+      <Project>{CBEEECB1-B554-3403-8390-66CFAD254D5B}</Project>
+      <Name>gtest-unittest-api_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_dll.vcxproj">
+      <Project>{94C3B181-517E-34DF-A59B-93931C1B87E5}</Project>
+      <Name>gtest_dll</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_dll_test_.vcxproj">
+      <Project>{89C37C2A-A2DF-3296-8D93-58581B4045EE}</Project>
+      <Name>gtest_dll_test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_environment_test.vcxproj">
+      <Project>{E6172299-FF73-3EDB-BFEF-2CDD94B4A61C}</Project>
+      <Name>gtest_environment_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_help_test_.vcxproj">
+      <Project>{691FAEE7-E989-38B0-AA17-97F2C3E892B2}</Project>
+      <Name>gtest_help_test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_list_output_unittest_.vcxproj">
+      <Project>{070BCA4D-9F2D-310E-B7EA-96AE9F9C89C0}</Project>
+      <Name>gtest_list_output_unittest_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_main.vcxproj">
+      <Project>{72513D9B-4679-38BA-9200-0727B4922916}</Project>
+      <Name>gtest_main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_main_no_exception.vcxproj">
+      <Project>{3DC4449F-D43F-3E9B-85EA-F96E09093F09}</Project>
+      <Name>gtest_main_no_exception</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_main_no_rtti.vcxproj">
+      <Project>{DD5B5E89-5997-382F-884B-04D185C3FD8E}</Project>
+      <Name>gtest_main_no_rtti</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_main_unittest.vcxproj">
+      <Project>{E6013711-4F2A-3C9D-88C6-83CACE7BBA17}</Project>
+      <Name>gtest_main_unittest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_no_exception.vcxproj">
+      <Project>{F1028CCC-8769-33A6-9200-82068EE2E0EF}</Project>
+      <Name>gtest_no_exception</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_no_rtti_unittest.vcxproj">
+      <Project>{F57F9ED8-7620-3E56-A7BE-F06F6D9A5DAD}</Project>
+      <Name>gtest_no_rtti_unittest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_no_test_unittest.vcxproj">
+      <Project>{D68561AE-4328-3D08-981A-3BC507465068}</Project>
+      <Name>gtest_no_test_unittest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_pred_impl_unittest.vcxproj">
+      <Project>{FE94D7B4-B89A-3556-B289-6714C639DF04}</Project>
+      <Name>gtest_pred_impl_unittest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_premature_exit_test.vcxproj">
+      <Project>{2FD4B3C9-4B8D-3576-BB9B-6AB3D2CC25E1}</Project>
+      <Name>gtest_premature_exit_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_prod_test.vcxproj">
+      <Project>{D96D7AAB-A7D0-349E-BD0A-960816EAF520}</Project>
+      <Name>gtest_prod_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_repeat_test.vcxproj">
+      <Project>{398C103D-78B5-3736-AD45-3F6F3325C58A}</Project>
+      <Name>gtest_repeat_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_skip_in_environment_setup_test.vcxproj">
+      <Project>{ED074741-5FE1-3F3A-8C7E-B98ABE95E669}</Project>
+      <Name>gtest_skip_in_environment_setup_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_skip_test.vcxproj">
+      <Project>{60E4A7D0-96F4-3D31-86AF-F7D9F75E1F3C}</Project>
+      <Name>gtest_skip_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_sole_header_test.vcxproj">
+      <Project>{64427DB7-5E8E-3E89-88F6-4612DCD739E2}</Project>
+      <Name>gtest_sole_header_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_stress_test.vcxproj">
+      <Project>{1D22BD23-2DA5-38E9-A2FA-3C73E46D6339}</Project>
+      <Name>gtest_stress_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_throw_on_failure_ex_test.vcxproj">
+      <Project>{848FC999-260B-3289-AF1D-87C667E7F338}</Project>
+      <Name>gtest_throw_on_failure_ex_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_unittest.vcxproj">
+      <Project>{4678FDD0-6D5D-377C-8EE7-4EFF286E6A60}</Project>
+      <Name>gtest_unittest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_xml_outfile1_test_.vcxproj">
+      <Project>{D33BAFCE-BE80-39BD-A2C8-F3A9EBC68F0A}</Project>
+      <Name>gtest_xml_outfile1_test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_xml_outfile2_test_.vcxproj">
+      <Project>{8DB3AC91-2D70-3771-A7D6-436B94BE439C}</Project>
+      <Name>gtest_xml_outfile2_test_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googletest\gtest_xml_output_unittest_.vcxproj">
+      <Project>{29AD3747-093D-3F25-BEAD-FD0286D7ABF1}</Project>
+      <Name>gtest_xml_output_unittest_</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\shared_gmock_main.vcxproj">
+      <Project>{33E93301-752F-3325-9478-9A88387539C4}</Project>
+      <Name>shared_gmock_main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\src\googletest\mybuild\googlemock\shared_gmock_test_.vcxproj">
+      <Project>{1BF3979C-682A-377F-B611-DE34EF3C5ED3}</Project>
+      <Name>shared_gmock_test_</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
